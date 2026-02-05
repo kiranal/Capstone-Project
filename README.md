@@ -65,5 +65,9 @@ These variables represent a mix of clinical measurements and lifestyle condition
   
 Above approach resulted easier risk calculation and clear data rather than analyzing too many individual variables.
 
-
-
+#### Model Training: Baseline Decision Tree ###
+- Trained a simple Decision Tree model as a baseline.
+- Used a 60% train, 25% validation, and 15% test split.
+- Evaluated the model using accuracy, precision, recall, and F1-score.
+- The model achieved limited accuracy, which suggests underfitting.
+Need further evaluation of various other models to accurately predict the heart failure risks, while considering the initial parameters identified as part of EDA, in the absence of good model I may 
