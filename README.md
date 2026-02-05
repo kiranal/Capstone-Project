@@ -24,3 +24,46 @@ Dataset: https://www.kaggle.com/datasets/khushikyad001/heart-attack-risk-predict
      3. Checked for missing values and duplicate rows.
      4. This step helps make sure the data is clean enough to continue with analysis
 
+#### Step 2 : Exploratory Data Analysis: Key Combinations (Cholesterol, Blood Pressure, Lifestyle) ####
+- Initial Analysis showed that many individual features did not clearly separate low-risk and high-risk patients.
+- Risk patterns became clearer when multiple factors were analyzed together.
+- Based on this,  understanding how clinical factors and lifestyle factors interact becomes important in considering the risk factors
+
+#### What and why - specific columns were selected ####
+The following columns were used for combination analysis:
+1. Cholesterol (chol)
+- Important clinical indicator for heart disease.
+- Showed some signal in EDA but worked better when combined with other factors.
+1. Blood Pressure (trestbps)
+- Showed clearer separation between risk groups compared to many other features.
+- Clinically relevant and commonly used in risk assessment.
+1. Diabetes (diabetes)
+- Long-term health condition linked to heart disease.
+- Increased risk when present, especially with other factors.
+1. Smoking (smoking)
+- Known lifestyle risk factor.
+- Included to capture cumulative lifestyle effects, even though its individual impact was weaker in this dataset.
+1. Obesity (obesity)
+- Associated with higher cardiovascular risk.
+- Interacts with diabetes and cholesterol.
+
+These variables represent a mix of clinical measurements and lifestyle conditions, which aligns with real-world heart-risk assessment.
+
+#### How the combinations were created #### 
+1. Cholesterol and blood pressure were grouped into medically meaningful categories:
+- Normal
+- Borderline / Elevated
+- High
+1. Lifestyle risk was summarized using a combined score based on:
+- Diabetes
+- Smoking
+- Obesity
+1. Lifestyle groups were defined as:
+- No Lifestyle Risk Factors
+- One Lifestyle Risk Factor
+- Multiple Lifestyle Risk Factors
+  
+Above approach resulted easier risk calculation and clear data rather than analyzing too many individual variables.
+
+
+
