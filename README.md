@@ -65,6 +65,58 @@ These variables represent a mix of clinical measurements and lifestyle condition
   
 Above approach resulted easier risk calculation and clear data rather than analyzing too many individual variables.
 
+
+## Models - Performance interpretation  ##
+
+To evaluate the performance and identify suitable model, following five metrics are used -
+- Accuracy
+- Precision
+- Recall
+- F1-Score
+- AUC
+
+####  Accuracy - Indicates overall correctness ####
+Accuracy measures the percentage of total predictions that were correct.
+- Higher accuracy means the model correctly predicts more cases overall.
+- However, accuracy alone can be misleading if the dataset has overlapping patterns or class imbalance.
+- In healthcare prediction tasks, accuracy should be interpreted together with Recall and AUC.
+
+
+####  Precision - Shows prediction reliability ####
+Precision measures how many of the predicted high-risk patients were actually high risk.
+
+$$Precision = True Postive / Predicted Postive$$
+
+- Higher the precision means, fewer false alarams
+- Useful when false positives are costly
+- Precision alone does not denote whether the model is missing high risk patients
+
+
+####  Recall - Measures risk detection ability ####
+Recall measures how many of the actual high-risk patients were successfully detected by the model.
+
+$$Recall = True Postive / Actual Postive$$
+
+- Higher recall means the model detects more high-risk individuals.
+- In healthcare, recall is often more important than accuracy because missing a high-risk patient can be serious.
+
+####  F1-Score - Balances precision and recall ####
+F1-score is the harmonic mean of Precision and Recall.
+
+$$F1-Score = 2 * ((Precision * Recall)/(Precision + Recall))$$
+
+- Provides a balanced measure when both false positives and false negatives matter.
+- Useful for comparing models when there is no single dominant metric.
+- F1-scores were used to compare overall classification balance across models.
+
+
+####  AUC - Evaluates overall ranking performance ####
+AUC measures how well the model separates high-risk and low-risk patients across all classification thresholds.
+
+- Higher AUC indicates better ranking ability.
+- AUC is especially useful when the goal is to prioritize high-risk patients rather than make a single yes/no decision.
+
+
 ## Models  ##
 Used a 60% train, 25% validation, and 15% test split.
 
@@ -103,34 +155,5 @@ Used a 60% train, 25% validation, and 15% test split.
 - In this project, XGBoost achieved the highest Recall, meaning it detected more patients who are at high risk of heart attack.
 - It also maintained competitive AUC and Accuracy, indicating strong overall predictive capability.
 - Because detecting high-risk patients is the primary objective, XGBoost is selected as the recommended final model, while Gradient Boosting remains a strong alternative model.
-
-## Models - Performance interpretation  ##
-
-To evaluate the performance and identify suitable model, following five metrics are used -
-- Accuracy
-- Precision
-- Recall
-- F1-Score
-- AUC
-
-####  Accuracy ####
-Accuracy measures the percentage of total predictions that were correct.
-- Higher accuracy means the model correctly predicts more cases overall.
-- However, accuracy alone can be misleading if the dataset has overlapping patterns or class imbalance.
-- In healthcare prediction tasks, accuracy should be interpreted together with Recall and AUC.
-
-
-####  Precision ####
-Precision measures how many of the predicted high-risk patients were actually high risk.
-
-$$Precision = True Postive / Predicted Postive$$
-- Higher the precision means, fewer false alarams
-- Useful when false positives are costly
-- Precision alone does not denote whether the model is missing high risk patients
-
-
-####  Recall ####
-Recall measures how many of the actual high-risk patients were successfully detected by the model.
-$$Recall = True Postive / Actual Postive$$
 
 
