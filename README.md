@@ -154,6 +154,9 @@ Used a 60% train, 25% validation, and 15% test split.
 - XGBoost (Extreme Gradient Boosting) is an optimized implementation of the Gradient Boosting algorithm that improves training efficiency and predictive performance.
 - In this project, XGBoost achieved the highest Recall, meaning it detected more patients who are at high risk of heart attack.
 - It also maintained competitive AUC and Accuracy, indicating strong overall predictive capability.
-- Because detecting high-risk patients is the primary objective, XGBoost is selected as the recommended final model, while Gradient Boosting remains a strong alternative model.
+
+**Because detecting high-risk patients is the primary objective, XGBoost is selected as the recommended final model, while Gradient Boosting remains a strong alternative model.**
+
+
 
 
