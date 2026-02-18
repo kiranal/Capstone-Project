@@ -114,10 +114,26 @@ To evaluate the performance and identify suitable model, following five metrics 
 - AUC
 
 ####  Accuracy ####
+Accuracy measures the percentage of total predictions that were correct.
+- Higher accuracy means the model correctly predicts more cases overall.
+- However, accuracy alone can be misleading if the dataset has overlapping patterns or class imbalance.
+- In healthcare prediction tasks, accuracy should be interpreted together with Recall and AUC.
+
+
+####  Precision ####
 Precision measures how many of the predicted high-risk patients were actually high risk.
-![Alt text for the diagram](Images/Precision.png)
+$$
+Precision = True Postive / Predicted Postive 
+$$
 - Higher the precision means, fewer false alarams
 - Useful when false positives are costly
-- Precision alone does not denote whether the model is missing high risk patients 
+- Precision alone does not denote whether the model is missing high risk patients
+
+
+####  Recall ####
+Recall measures how many of the actual high-risk patients were successfully detected by the model.
+$$
+Recall = True Postive / Actual Postive 
+$$
 
 
