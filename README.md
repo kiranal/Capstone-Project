@@ -115,7 +115,7 @@ To evaluate the performance and identify suitable model, following five metrics 
 
 ####  Accuracy ####
 Precision measures how many of the predicted high-risk patients were actually high risk.
-![Alt text for the diagram](images/your_diagram_name.png)
+![Alt text for the diagram](Images/Precision.png)
 - Higher the precision means, fewer false alarams
 - Useful when false positives are costly
 - Precision alone does not denote whether the model is missing high risk patients 
