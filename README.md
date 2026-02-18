@@ -122,9 +122,8 @@ Accuracy measures the percentage of total predictions that were correct.
 
 ####  Precision ####
 Precision measures how many of the predicted high-risk patients were actually high risk.
-$$
-Precision = True Postive / Predicted Postive 
-$$
+
+$$Precision = True Postive / Predicted Postive$$
 - Higher the precision means, fewer false alarams
 - Useful when false positives are costly
 - Precision alone does not denote whether the model is missing high risk patients
@@ -132,8 +131,6 @@ $$
 
 ####  Recall ####
 Recall measures how many of the actual high-risk patients were successfully detected by the model.
-$$
-Recall = True Postive / Actual Postive 
-$$
+$$Recall = True Postive / Actual Postive$$
 
 
