@@ -65,9 +65,59 @@ These variables represent a mix of clinical measurements and lifestyle condition
   
 Above approach resulted easier risk calculation and clear data rather than analyzing too many individual variables.
 
-#### Model Training: Baseline Decision Tree ###
+## Models  ##
+Used a 60% train, 25% validation, and 15% test split.
+
+#### Baseline : Decision Tree ####
 - Trained a simple Decision Tree model as a baseline.
-- Used a 60% train, 25% validation, and 15% test split.
 - Evaluated the model using accuracy, precision, recall, and F1-score.
 - The model achieved limited accuracy, which suggests underfitting.
-Need further evaluation of various other models to accurately predict the heart failure risks, while considering the initial parameters identified as part of EDA, in the absence of good model I may 
+
+
+####  Logistic Regression ####
+- This model predicts heart-attack risk using a linear combination of features.
+- It is easy to understand and interpret.
+- However, it assumes mostly linear relationships between features and the target.
+- Because healthcare data often contains complex interactions, the model showed moderate performance.
+
+
+####  Polynomial Logistic Regression: ####
+- Added Polynomial Features (degree = 2) before Logistic Regression.
+- This allows the model to capture interaction effects between features.
+- Compared to the basic Logistic Regression, this model improved recall, meaning it identified more high-risk patients.
+- This shows that feature interactions are important for predicting heart-attack risk.
+
+####  Random Forest ####
+- Random Forest is an ensemble method that builds many decision trees and combines their predictions.
+- It automatically captures non-linear relationships and feature interactions.
+- Compared to a single Decision Tree, Random Forest produced more stable and better overall performance.
+
+####  Gradient Boosting ####
+- Gradient Boosting builds decision trees sequentially, where each new tree learns from the errors of the previous trees.
+- It performs well for structured healthcare datasets because it can capture non-linear relationships and interactions between multiple risk factors.
+- In this project, Gradient Boosting achieved strong overall ranking performance (high AUC) and maintained balanced Accuracy, Precision, and Recall.
+- It serves as a reliable ensemble benchmark model for comparison.
+
+####  XGBoost ####
+- XGBoost (Extreme Gradient Boosting) is an optimized implementation of the Gradient Boosting algorithm that improves training efficiency and predictive performance.
+- In this project, XGBoost achieved the highest Recall, meaning it detected more patients who are at high risk of heart attack.
+- It also maintained competitive AUC and Accuracy, indicating strong overall predictive capability.
+- Because detecting high-risk patients is the primary objective, XGBoost is selected as the recommended final model, while Gradient Boosting remains a strong alternative model.
+
+## Models - Performance interpretation  ##
+
+To evaluate the performance and identify suitable model, following five metrics are used -
+- Accuracy
+- Precision
+- Recall
+- F1-Score
+- AUC
+
+####  Accuracy ####
+Precision measures how many of the predicted high-risk patients were actually high risk.
+![Alt text for the diagram](images/your_diagram_name.png)
+- Higher the precision means, fewer false alarams
+- Useful when false positives are costly
+- Precision alone does not denote whether the model is missing high risk patients 
+
+
