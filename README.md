@@ -261,6 +261,9 @@ The trained heart desease risk model will be deployed as a cloud-based predictio
 
 1. https://www.ischool.berkeley.edu/research
 2. https://www.kaggle.com/datasets/khushikyad001/heart-attack-risk-prediction-dataset-india
-3. 
+3. https://www.dailydoseofds.com/why-do-we-use-log-loss-to-train-logistic-regression/
+4. https://www.escardio.org/communities/councils/cardiology-practice/scientific-documents-and-publications/sleep-apnoea-a-wake-up-call-for-cardiologists/
+5. https://www.kaggle.com/code/ozgurozenn/hearth-attack-train-manuel-and-decisiontree
+6. https://selfchec.org/selfchecks-heart.php?gad_source=1&gad_campaignid=203458804&gbraid=0AAAAADmkkqQdwNSMPsDOc2naTdSt3ljUD&gclid=CjwKCAiAzOXMBhASEiwAe14SacTCAkhFcT4iT9S0nyLIcLfstls_TnTz2SB74wVUMj-_MB-aWMbPMBoCzpMQAvD_BwE
 
 
