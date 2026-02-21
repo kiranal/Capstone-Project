@@ -10,7 +10,7 @@ The goal is to move from just reacting to emergencies (like a heart attack) to a
 
 #### 1.1 Problem statement ####
 
-"How accurately can we use AI to predict heart attack risk for people in India? And when we look at all the health factors, just how much bigger of a red flag is diabetes compared to everything else?"
+"How accurately can we use Machine learning in creating a suitable model to predict heart attack risk for people in India? And when we look at all the health factors, just how much bigger of a red flag is diabetes compared to everything else?"
 
 #### 1.2 Data Source ####
 
@@ -243,7 +243,7 @@ Considering the critical nature of early detection in preventive healthcare, XGB
 
 ### 8. Deployment Strategy ###
 
-The trained heartdesease risk model will be deployed as a cloud-based prediction service along with 
+The trained heart desease risk model will be deployed as a cloud-based prediction service along with 
 
 - A chatbot-style web interface will collect patient vitals and lifestyle information (such as cholesterol, blood pressure, diabetes, smoking, and obesity).
     - The chatbot will securely send the input data to a FastAPI backend endpoint using HTTPS.
@@ -253,7 +253,14 @@ The trained heartdesease risk model will be deployed as a cloud-based prediction
     - Basic authentication for secure access
     - Request logging and monitoring to track usage and errors
     - A clear medical disclaimer will be displayed to inform users that the prediction is only a screening tool and not a medical diagnosis.
+**Below is teh model deployment view along with relearn feedback flow**
 
+![Alt text for the image](Images/DeploymentView.png)
 
+### References ###
+
+1. https://www.ischool.berkeley.edu/research
+2. https://www.kaggle.com/datasets/khushikyad001/heart-attack-risk-prediction-dataset-india
+3. 
 
 
