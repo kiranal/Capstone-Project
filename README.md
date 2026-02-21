@@ -1,4 +1,4 @@
-# Capstone Project : Heart Attack Risk Prediction #
+# Capstone Project : Heart Disease -  Risk Prediction #
 
 ## 1. Problem Context ##
 
@@ -241,7 +241,19 @@ Considering the critical nature of early detection in preventive healthcare, XGB
 - **Test the model on external datasets** - to evaluate generalizability and robustness.
 - **Incorporate additional variables** - such as medication history or genetic factors, to improve predictive performance and clinical relevance.
 
-### Deployment Strategy ###
+### 8. Deployment Strategy ###
+
+The trained heartdesease risk model will be deployed as a cloud-based prediction service along with 
+
+- A chatbot-style web interface will collect patient vitals and lifestyle information (such as cholesterol, blood pressure, diabetes, smoking, and obesity).
+    - The chatbot will securely send the input data to a FastAPI backend endpoint using HTTPS.
+    - The backend will load the saved XGBoost model pipeline from cloud storage and generates a risk probability score & risk classification (High Risk / Low Risk)
+  
+- The system will include:
+    - Basic authentication for secure access
+    - Request logging and monitoring to track usage and errors
+    - A clear medical disclaimer will be displayed to inform users that the prediction is only a screening tool and not a medical diagnosis.
+
 
 
 
