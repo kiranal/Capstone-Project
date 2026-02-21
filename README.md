@@ -117,7 +117,7 @@ AUC measures how well the model separates high-risk and low-risk patients across
 - AUC is especially useful when the goal is to prioritize high-risk patients rather than make a single yes/no decision.
 
 
-## 4 Models  - Training and performance##
+## 4 Models  - Training and performance ##
 Used a 60% train, 25% validation, and 15% test split.
 
 #### 4.1 Baseline : Decision Tree ####
@@ -224,7 +224,7 @@ Considering Health care problem in hand -
 
 ## 6. Conclusion  ##
 
-Recommended model: XGBoost
+** *Recommended model: XGBoost* **
 
 Based on comprehensive analysis, XGBoost is recommended as the final model for the heart attack risk prediction system. This recommendation is driven by the following key findings:
 - Performance Metrics: While the Gradient Boosting model demonstrated a marginally higher Area Under the Curve (AUC), XGBoost achieved the highest Recall and F1-score across evaluations, which included the performance table and ROC curve analysis.
@@ -234,14 +234,12 @@ Based on comprehensive analysis, XGBoost is recommended as the final model for t
 ### 6.1 Recommended model: ###
 Considering the critical nature of early detection in preventive healthcare, XGBoost provides the optimal balance between predictive strength and clinical utility for the heart-attack risk prediction. Its superior Recall performance ensures that the system is best positioned to identify and enable intervention with high-risk patients effectively.
 
-### 6.2 Further enhancements ###
+### 6.2 Next steps ###
 - **Perform hyperparameter tuning on the selected XGBoost model** to further improve Recall and AUC by adjusting parameters such as learning rate, max depth, and number of trees.
 - **Explore additional feature engineering**- including interaction features (e.g., combined clinical risk scores) to better capture relationships between cholesterol, blood pressure, and lifestyle factors.
 - **Optimize the classification threshold to prioritize Recall**, since detecting high-risk patients is more important than maximizing overall accuracy in healthcare settings.
-Conduct cost-sensitive evaluation to reduce the impact of false negatives (missed high-risk patients).
-Analyze feature importance to improve interpretability and understand which factors contribute most to heart-attack risk predictions.
-Test the model on external or real-world datasets to evaluate generalizability and robustness.
-Incorporate additional clinical variables, such as medication history or genetic factors, to improve predictive performance and clinical relevance.
+- **Test the model on external datasets** - to evaluate generalizability and robustness.
+- **Incorporate additional variables** - such as medication history or genetic factors, to improve predictive performance and clinical relevance.
 
 
 
