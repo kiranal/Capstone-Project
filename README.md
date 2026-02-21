@@ -266,4 +266,8 @@ The trained heart desease risk model will be deployed as a cloud-based predictio
 5. https://www.kaggle.com/code/ozgurozenn/hearth-attack-train-manuel-and-decisiontree
 6. https://selfchec.org/selfchecks-heart.php?gad_source=1&gad_campaignid=203458804&gbraid=0AAAAADmkkqQdwNSMPsDOc2naTdSt3ljUD&gclid=CjwKCAiAzOXMBhASEiwAe14SacTCAkhFcT4iT9S0nyLIcLfstls_TnTz2SB74wVUMj-_MB-aWMbPMBoCzpMQAvD_BwE
 
+### Contact and Further Information ###
+Kiran Aralapuram
+kiran.aral@gmail.com
+
 
