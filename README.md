@@ -1,4 +1,4 @@
-# Capstone Project : Heart Disease -  Risk Prediction #
+# Project : Heart Disease -  Risk Prediction #
 
 ## 1. Problem Context ##
 
